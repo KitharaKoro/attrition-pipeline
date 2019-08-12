@@ -15,4 +15,5 @@ binarizer = output["binarizer"]
 model.predict(pd.concat((pd.DataFrame(binarizer.fit_transform(df['department'])),
               df["nb_of_sessions"]), axis=1))
 output["coefficient_names"]
+output["coefficients"]
 model.predict_proba(np.array([1, 0, 0, 0, 1]).reshape(1, -1))
