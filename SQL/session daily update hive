@@ -1,0 +1,11 @@
+Insert Overwrite Table session_daily Partition date
+Select * From session_daily
+Union
+Select
+    employee_id
+    , count(1) as nb_of_sessions
+    , sum(time_length) as total_time
+    , min(start_date) as date
+From session
+Where start_date = '2019-01-10'
+Group By employee_id;

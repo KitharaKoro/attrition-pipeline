@@ -1,0 +1,7 @@
+Create Table session_daily
+(
+    employee_id int
+    , nb_of_sessions int
+    , total_time bigint
+)
+Partitioned By (date int);

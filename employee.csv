@@ -1,0 +1,16 @@
+﻿employee_id,name,sex,join_date,leave_date,leave_reason,department,seniority,location
+1,,,20190101,20190112,quit,sales,entry,montreal
+2,,,20190101,,,product,mid,toronto
+3,,,20180101,,,product,senior,toronto
+4,,,20180101,,,upper_management,senior,montreal
+5,,,20180101,,,finance,mid,toronto
+6,,,20180101,,,finance,mid,toronto
+7,,,20180101,,,sales,mid,toronto
+8,,,20180101,,,sales,mid,toronto
+9,,,20180101,,,sales,mid,toronto
+10,,,20180101,,,upper_management,senior,toronto
+11,,,20180101,,,product,mid,toronto
+12,,,20180101,,,finance,mid,montreal
+13,,,20180101,,,finance,mid,montreal
+14,,,20180101,,,sales,mid,montreal
+15,,,20190101,,,sales,entry,montreal

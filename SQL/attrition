@@ -1,0 +1,29 @@
+Create Table user_tp_temp_daily_range
+As
+Select
+    employee_id
+    , sum(nb_of_sessions) As nb_of_sessions
+    , sum(total_time) As total_time
+From session_daily
+Group By employee_id;
+
+
+Create Table user_tp_attrition
+As
+Select 
+    e.employee_id
+    , Case 
+        When e.leave_date Is Not Null Then 1
+        else 0 
+        End As attrition
+    , e.sex
+    , e.seniority
+    , e.department
+    , e.location
+    , dr.nb_of_sessions
+    , dr.total_time
+From employee as e
+Inner Join
+user_tp_temp_daily_range as dr On e.employee_id = dr.employee_id;
+
+Drop Table user_tp_temp_daily_range;

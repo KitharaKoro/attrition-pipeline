@@ -1,0 +1,10 @@
+Insert Into session_daily
+Select
+    employee_id
+    , count(1) as nb_of_sessions
+    , sum(time_length) as total_time
+    , min(start_date) as date
+From session
+Where start_date = "2019-01-11"
+Group By employee_id
+;
